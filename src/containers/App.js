@@ -26,14 +26,15 @@ export const App = () => {
       });
   };
 
-  useEffect(() => {
-    requestItems("people");
-  }, []);
 
   const handleClick = (type) => {
     setState({ ...state, isLoading: true });
     requestItems(type);
   };
+
+  useEffect(() => {
+    requestItems("people");
+  }, []);
 
   return (
     <ErrorBoundary>
