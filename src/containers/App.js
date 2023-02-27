@@ -26,7 +26,6 @@ export const App = () => {
       });
   };
 
-
   const handleClick = (type) => {
     setState({ ...state, isLoading: true });
     requestItems(type);
@@ -34,6 +33,7 @@ export const App = () => {
 
   useEffect(() => {
     requestItems("people");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
